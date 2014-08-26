@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Fancyshop02" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "帆思" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -36,7 +36,7 @@
 
     <%= javascript_include_tag "application" %>
   </head>
-  <body>
+  <body class="container-fluid">
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -44,7 +44,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">风行网店管理系统</a>
+        <a class="navbar-brand" href="#">帆思网店管理系统</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><a  href="add_good.html" target='main'>添加新商品</a></li>
@@ -62,12 +62,12 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="personal">
       <div class="row">
         <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="dropdown">
+            <div class="navbar">
+
+              <li class="dropdown left_li btn btn-default">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" style='display: inline-block;'>
                   <div  style='bottom: 5px; float: right; position: relative; z-index: 30; '>
                     <small class="badge" style="color: #F75C2F;">112</small>
@@ -83,8 +83,8 @@
                   <li><a href="lgoin.html">向指定用户发小纸条<span class="badge">14</span></a></li>
                 </ul>
               </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">超级管理员，simon <span class="caret"></span></a>
+              <li class="dropdown btn btn-default" id="admin">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">欢迎登陆，simon <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="personal_info.html" target='main'>个人信息管理</a></li>
                   <li><a href="#">新建员工</a></li>
@@ -92,20 +92,22 @@
                   <li><a href="lgoin.html">登出</a></li>
                 </ul>
               </li>
-            </ul>
-          </div><!--/.well -->
+            </div>
+
         </div><!--/span-->
         <div class="col-lg-9">
-          <%= bootstrap_flash %>
-          <%= yield %>
-          <footer>
-            <p>&copy; 天地网 2014</p>
-          </footer>
+               <h6>请谨慎操作</h6>
         </div>
 
 
       </div><!--/row-->
-
+    <div class="row">
+      <%= bootstrap_flash %>
+      <%= yield %>
+      <footer>
+        <p>&copy; 天地网 2014</p>
+      </footer>
+    </div>
 
 
     </div> <!-- /container -->

@@ -6,9 +6,6 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:showname) %></th>
-      <th><%= model_class.human_attribute_name(:username) %></th>
-      <th><%= model_class.human_attribute_name(:password) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
       <th><%= model_class.human_attribute_name(:encrypted_password) %></th>
       <th><%= model_class.human_attribute_name(:reset_password_token) %></th>
@@ -26,9 +23,6 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= link_to user.id, user_path(user) %></td>
-        <td><%= user.showname %></td>
-        <td><%= user.username %></td>
-        <td><%= user.password %></td>
         <td><%= user.email %></td>
         <td><%= user.encrypted_password %></td>
         <td><%= user.reset_password_token %></td>

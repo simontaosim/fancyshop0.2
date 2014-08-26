@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  resources :users
+
   get 'admin_login/index'
 
   get 'adminLogin', :to => 'admin_login#index'
-
-  resources :users
 
   devise_for :users
   get 'home/index'

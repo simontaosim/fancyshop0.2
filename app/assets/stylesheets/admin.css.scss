@@ -1,14 +1,16 @@
 // Place all the styles related to the admin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#left{
-  float:left;
-  width:25%;
-}
-#main{
+.left_li{
   float: left;
-  width: 75%;
-  position: relative;
-  top:0px;
-
+  display: block;
+}
+#admin a{
+  text-decoration: none;
+}
+#personal{
+  background-color: #ffffff;
+}
+footer{
+  text-align: center;
 }
